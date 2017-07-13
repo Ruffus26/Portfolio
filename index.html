@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cristi Cernalewski - верстка сайтов на HTML и CSS">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Закажите разработку сайта без посредников от 5 990 рублей">
+    <meta property="og:site_name" content="Портфолио верстальщика">
+    <meta property="article:author" content="Cristi Cernalewski">
+    <title>Cristi Cernalewski - Портфолио</title>
+    <link href="https://fonts.googleapis.com/css?family=Fresca" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/fontello-embedded.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <header>
+     <div class="wrapper">
+      <div class="main-head">
+        <h1>Cristi Cernalevschi</h1>
+        <div class="main-line"></div>
+        <p>Dezvoltarea site-urilor folosind HTML &amp; CSS <br> Elaborarea site-urilor de la A la Z</p>
+      </div>
+     </div>
+      <div class="main-overlay"></div>
+      <div class="main-bottom"><a href="#p"><i class="icon-down"></i></a></div>
+    </header>
+
+    <div class="portfolio" id="p">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="portfolio-box">
+              <img src="img/portfolio/1.jpg" alt="My Works">
+              <a data-toggle="modal" data-work='work-1' href="#work">Vizioneaza</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="portfolio-box">
+              <img src="img/portfolio/2.jpg" alt="My Works">
+              <a data-toggle="modal" data-work='work-2' href="#work">Vizioneaza</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="portfolio-box">
+              <img src="img/portfolio/3.jpg" alt="My Works">
+              <a data-toggle="modal" data-work='work-3' href="#work">Vizioneaza</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-4">
+            <strong>Cristi Cernalevschi</strong>
+            <p>Web Developer <br> Crearea site-urilor de la A la Z</p>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-4">
+            <strong>Inscrie-te la noi !</strong>
+            <div class="social-links">
+              <a href="#"><i class="icon-vk"></i></a>
+              <a href="#"><i class="icon-instagram"></i></a>
+              <a href="#"><i class="icon-twitter"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-4">
+            <strong>Ai intrebari? Scrie-mi</strong>
+            <div class="footer-btn">
+              <a href="https://vk.me/cernalevschi99">Comanda un site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Modal -->
+<div class="modal fade" id="work" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  <h4 class="modal-title">Descrierea Proiectului</h4>
+			</div>
+			<div class="modal-body">
+			        
+			</div>
+		</div>
+	</div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $(function() {
+    		var link = $('a[data-toggle="modal"]');
+    		link.on('click', function(event) {
+    			var work = $(this).attr('data-work');
+    			var modal = $('.modal');
+    			modal.find('.modal-body').load(work+'.html');
+    		});
+    	});
+    </script>
+  </body>
+</html>
